@@ -27,10 +27,10 @@
         tsImage.image = [UIImage imageNamed:@"taylorswift"];
         [self addSubview:tsImage];
         
-//        fImage = [[UIImageView alloc] initWithFrame:CGRectMake((width-100)/2, 100, 100, 100)];
-//        fImage.image = [UIImage imageNamed:@"Franz"];
-//        fImage.backgroundColor = [UIColor greenColor];
-//        [self addSubview:fImage];
+        fImage = [[UIImageView alloc] initWithFrame:CGRectMake((width-100)/2, 100, 100, 100)];
+        fImage.image = [UIImage imageNamed:@"Franz"];
+        fImage.backgroundColor = [UIColor greenColor];
+        [self addSubview:fImage];
         
         CABasicAnimation *zPosition = [CABasicAnimation animation];
         zPosition.keyPath = @"zPosition";
@@ -75,42 +75,42 @@
         [testBtn1 addTarget:self action:@selector(btnClicked1) forControlEvents:UIControlEventTouchUpInside];
         testBtn1.backgroundColor = [UIColor colorWithRed:0.000 green:0.618 blue:0.500 alpha:0.510];
         [self addSubview:testBtn1];
-//        CABasicAnimation *fzPosition = [CABasicAnimation animation];
-//        fzPosition.keyPath = @"zPosition";
-//        fzPosition.fromValue = @-1;
-//        fzPosition.toValue = @1;
-//        fzPosition.duration = 1.2;
-//        
-//        CAKeyframeAnimation *frotation = [CAKeyframeAnimation animation];
-//        frotation.keyPath = @"transform.rotation";
-//        frotation.values = @[@0, @0.14, @0];
-//        frotation.duration = 1.2;
-//        frotation.timingFunctions = @[
-//                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
-//                                     ];
-//        
-//        CAKeyframeAnimation *fposition = [CAKeyframeAnimation animation];
-//        fposition.keyPath = @"position";
-//        fposition.values = @[
-//                            [NSValue valueWithCGPoint:CGPointZero],
-//                            [NSValue valueWithCGPoint:CGPointMake(110, -20)],
-//                            [NSValue valueWithCGPoint:CGPointZero]
-//                            ];
-//        fposition.timingFunctions = @[
-//                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
-//                                     ];
-//        fposition.additive = YES;
-//        fposition.duration = 1.2;
-//        
-//        CAAnimationGroup *fgroup = [[CAAnimationGroup alloc] init];
-//        fgroup.animations = @[fzPosition, frotation, fposition];
-//        fgroup.duration = 1.2;
-//        fgroup.beginTime = 0.5;
-//        
-//        [fImage.layer addAnimation:fgroup forKey:@"shuffle"];
-//        fImage.layer.zPosition = 1;
+        CABasicAnimation *fzPosition = [CABasicAnimation animation];
+        fzPosition.keyPath = @"zPosition";
+        fzPosition.fromValue = @-1;
+        fzPosition.toValue = @1;
+        fzPosition.duration = 1.2;
+        
+        CAKeyframeAnimation *frotation = [CAKeyframeAnimation animation];
+        frotation.keyPath = @"transform.rotation";
+        frotation.values = @[@0, @0.14, @0];
+        frotation.duration = 1.2;
+        frotation.timingFunctions = @[
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
+                                     ];
+        
+        CAKeyframeAnimation *fposition = [CAKeyframeAnimation animation];
+        fposition.keyPath = @"position";
+        fposition.values = @[
+                            [NSValue valueWithCGPoint:CGPointZero],
+                            [NSValue valueWithCGPoint:CGPointMake(110, -20)],
+                            [NSValue valueWithCGPoint:CGPointZero]
+                            ];
+        fposition.timingFunctions = @[
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
+                                     ];
+        fposition.additive = YES;
+        fposition.duration = 1.2;
+        
+        CAAnimationGroup *fgroup = [[CAAnimationGroup alloc] init];
+        fgroup.animations = @[fzPosition, frotation, fposition];
+        fgroup.duration = 1.2;
+        fgroup.beginTime = 0.5;
+        
+        [fImage.layer addAnimation:fgroup forKey:@"shuffle"];
+        fImage.layer.zPosition = 1;
         
         UIButton *testBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, height-100, width, 50)];
         [testBtn setTitle:@"click" forState:UIControlStateNormal];
